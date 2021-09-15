@@ -1,0 +1,211 @@
+.chat-room {
+  width: 100%;
+  padding: 12px;
+  color: #0f0f0fd3;
+  min-height: 65px;
+  .room-state {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(128, 128, 128, 0.8);
+    font-size: 12px;
+  }
+  .last-message {
+    width: 40%;
+    overflow: hidden;
+  }
+}
+.chat-room:hover {
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+.chat-room-active {
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+.chat-list-room {
+  border-right: 1px solid #919191;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.chat-box {
+  position: relative;
+  width: 100%;
+  border-right: 1px solid #919191;
+  min-height: 100vh;
+  padding-right: 24px;
+  .chat-title {
+    flex: 1;
+    color: rgb(0, 89, 255);
+    text-align: center;
+    width: 100%;
+    padding-top: 16px;
+    p {
+      color: rgba(0, 89, 255, 0.6);
+    }
+  }
+}
+
+.chat-area {
+  .list-message {
+    height: 85vh;
+    overflow: auto;
+  }
+  .chat-message {
+    position: relative;
+    padding-top: 12px;
+    width: 100%;
+    min-height: 70px;
+    .left-message {
+      margin-top: 12px;
+      text-align: left;
+      left: 0;
+      &:hover {
+        .left-date-message {
+          display: block;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .right-message {
+      text-align: right;
+      margin-top: 12px;
+      position: absolute;
+      right: 0;
+      &:hover {
+        .right-date-message {
+          display: block;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .my-bubble {
+      background-color: #008577 !important;
+      color: #f0f0f0 !important;
+      float: right;
+    }
+    /*
+        .mess {
+      width: 100%;
+      justify-content: flex-end;
+    }
+    */
+    .message-content {
+      position: relative;
+      .left-date-message {
+        display: none;
+        padding: 6px;
+        color: #f0f0f0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        font-size: 10px;
+        top: -20%;
+        right: -50px;
+      }
+      .right-date-message {
+        display: none;
+        padding: 6px;
+        color: #f0f0f0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        font-size: 10px;
+        top: -10%;
+        left: -50px;
+      }
+    }
+    .bubble {
+      width: fit-content;
+      padding: 10px;
+      border-radius: 12px;
+      background-color: rgba(146, 146, 146, 0.4);
+      color: #0f0f0f;
+    }
+  }
+}
+
+.chat-input {
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .send-btn {
+    color: rgba(0, 80, 255, 0.6);
+    padding: 4px;
+    height: 100%;
+    background-color: transparent;
+  }
+  .send-btn-active {
+    color: rgba(0, 80, 255, 1);
+  }
+}
+.room-name-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .send-btn {
+    color: rgba(0, 80, 255, 0.6);
+    padding: 4px;
+    height: 100%;
+    background-color: transparent;
+  }
+  .send-btn-active {
+    color: rgba(0, 80, 255, 1);
+  }
+}
+.chat-feature {
+  .chat-name {
+    padding: 12px;
+    text-align: center;
+    color: #0f0f0f;
+  }
+}
+
+.collapse {
+  margin-top: 12px;
+  .collapse-name {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.btn-delete {
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid rgb(255, 100, 83);
+  background-color: transparent;
+  text-align: center;
+  color: salmon;
+  &:hover {
+    background-color: rgb(255, 100, 83);
+    color: #f0f0f0;
+  }
+}
